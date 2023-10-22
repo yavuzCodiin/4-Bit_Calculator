@@ -4,7 +4,7 @@
 
 ### <ins>INTRODUCTION</ins>
 
-Figure 7.1 depicts the datapath for the calculator to be designed in this experiment. The wires in the vertical direction represent the data, while the labeled horizontal wires coming from the sides, including the ALU Carry-In (Cin) signal, are 
+>Figure 7.1 depicts the datapath for the calculator to be designed in this experiment. The wires in the vertical direction represent the data, while the labeled horizontal wires coming from the sides, including the ALU Carry-In (Cin) signal, are 
 the control signals from the FSM used to facilitate various operations through the calculator. Depending on the Input_Select signal, various externally and internally generated data signals can be fed to the datapath from the top: Bitwise inverted and non-inverted input data (DIN), inverted and non-inverted register B (RB), arithmetic-right-shifted (ARS), logical-right-shifted (LRS), and logical-left-shifted (LLS), and non-shifted register A (RA). Both RA and RB are 4-bit wide. The 4-bit Arithmetic Logic Unit (ALU), ARS, LRS, LLS units are purely combinational, and do not contain any memory elements. The ALU unit in this calculator can only do one of eight operations based on the ALU_OP value, as shown in Table 7.1 below. Note the clock signal going to RA and RB are not shown in Figure 7.1.
 >* Programming Language: Vhdl
 >* IDE: Altera Quartus
@@ -14,7 +14,7 @@ the control signals from the FSM used to facilitate various operations through t
 
 ### <ins>Finite State Machine</ins>
 
-FSM stands for Finite State Machine. It is a mathematical model used in computer science and engineering to design and describe the behavior of systems that can be in a finite number of states at any given time. FSMs are widely used in various applications, including digital circuit design, software engineering, natural language processing, and modeling real-world systems
+>FSM stands for Finite State Machine. It is a mathematical model used in computer science and engineering to design and describe the behavior of systems that can be in a finite number of states at any given time. FSMs are widely used in various applications, including digital circuit design, software engineering, natural language processing, and modeling real-world systems
 
 #### <ins>FSM OUTPUT SEQUENCE PLANNING</ins>
 
@@ -93,29 +93,29 @@ RB is [13] => output = [13] || or if I select ınput select as 001(LLS) output w
 
 ### <ins>Register</ins>
 
-In digital electronics, a register is a group of flip-flops (binary storage elements) that store binary data as individual bits. Registers are fundamental building blocks used in various parts of a computer system, including processors, memory units, and input/output interfaces. They are crucial for data manipulation, storage, and transfer within a digital system.
-
-Here are the key aspects of registers:
-
-1. Storage of Data: Registers store binary data, which can represent numbers, instructions, addresses, or any other digital information. Each bit within a register can store either 0 or 1.
-
-2. Size: Registers can vary in size, commonly coming in sizes such as 8-bit, 16-bit, 32-bit, or 64-bit, indicating the number of bits they can store. For example, a 32-bit register can store 32 binary digits (bits).
-
-3. Data Manipulation: Registers are used for various arithmetic and logic operations. Processors use registers to perform computations, comparisons, and other operations, making them essential for the central processing unit (CPU) functionality.
-
-4. Data Transfer: Data is transferred between registers and other parts of the computer system, such as memory or input/output devices. Registers act as temporary storage during these transfers.
-
-5. Data Buffering: Registers are used as buffers to hold data temporarily when transferring data between different parts of a system operating at different speeds.
-
-6. Types of Registers:
-
-* Data Registers: Used to store data temporarily during operations.
-* Address Registers: Store memory addresses for read and write operations.
-* Program Counter (PC): Holds the memory address of the next instruction to be executed.
-* Instruction Register (IR): Stores the current instruction being executed.
-* Status Register/Flags Register: Holds status flags (e.g., zero, carry, overflow) indicating the outcome of operations.
-* Index Registers: Used for indexing in memory operations.
-
+>In digital electronics, a register is a group of flip-flops (binary storage elements) that store binary data as individual bits. Registers are fundamental building blocks used in various parts of a computer system, including processors, memory units, and input/output interfaces. They are crucial for data manipulation, storage, and transfer within a digital system.
+>
+>Here are the key aspects of registers:
+>
+>1. Storage of Data: Registers store binary data, which can represent numbers, instructions, addresses, or any other digital information. Each bit within a register can store either 0 or 1.
+>
+>2. Size: Registers can vary in size, commonly coming in sizes such as 8-bit, 16-bit, 32-bit, or 64-bit, indicating the number of bits they can store. For example, a 32-bit register can store 32 binary digits (bits).
+>
+>3. Data Manipulation: Registers are used for various arithmetic and logic operations. Processors use registers to perform computations, comparisons, and other operations, making them essential for the central processing unit (CPU) functionality.
+>
+>4. Data Transfer: Data is transferred between registers and other parts of the computer system, such as memory or input/output devices. Registers act as temporary storage during these transfers.
+>
+>5. Data Buffering: Registers are used as buffers to hold data temporarily when transferring data between different parts of a system operating at different speeds.
+>
+>6. Types of Registers:
+>
+>* Data Registers: Used to store data temporarily during operations.
+>* Address Registers: Store memory addresses for read and write operations.
+>* Program Counter (PC): Holds the memory address of the next instruction to be executed.
+>* Instruction Register (IR): Stores the current instruction being executed.
+>* Status Register/Flags Register: Holds status flags (e.g., zero, carry, overflow) indicating the outcome of operations.
+>* Index Registers: Used for indexing in memory operations.
+>
 >Whenever clock is on rising edge and if input of load is 1 register takes new Data and stores it however if load=0 it continues to stores same data or if reset is 1 it reset the data which is stored
 
 ![image](https://github.com/yavuzCodiin/4-Bit_Calculator/assets/82445309/85b242d8-32b6-4e18-bd4a-cdaf6f89d3d1)
