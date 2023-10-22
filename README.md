@@ -122,14 +122,30 @@ Here are the key aspects of registers:
 
 >My first input is [3] until clock is on rising edge, load is 1 and rst is 0 output stays as a [0] when this condition happens my input [3] appears on output. After this when clock is again rising and load is 1 my output should be [3] but there is another factor reset is also 1 when clock is on rising edge so my output appears as [0] which means it resets.
 
+## <ins>DATAPATH PART OF CALCULATOR</ins>
 
+### <ins>WAVEFORM</ins>
 
+![image](https://github.com/yavuzCodiin/4-Bit_Calculator/assets/82445309/9066e6ec-b415-40ed-bad7-e59f24918cf5)
 
+>We can see “010” ALU operation which is ADD3 mıcro operation in this waveform which is (cin+loadA+LoadB)
 
+### <ins>Block Diagram Schematic Of DATAPATH Of Calculator</ins>
 
+![image](https://github.com/yavuzCodiin/4-Bit_Calculator/assets/82445309/875f3db9-447a-4c47-9ca7-ec74c08a39a6)
 
+### <ins>Functional Simulation of Calculator</ins>
 
+![image](https://github.com/yavuzCodiin/4-Bit_Calculator/assets/82445309/f7e75c47-c603-4004-bb1c-088d2882dead)
 
+### <ins>Timing Simulation of Calculator</ins>
 
+![image](https://github.com/yavuzCodiin/4-Bit_Calculator/assets/82445309/d218287c-0df2-41e1-9ce0-3cfbb8ac9fce)
+
+>Fmax can be found from 1/T, T is worst case delay and 1/(4.5*10^-9) =0.22x10^9
+
+## <ins>Conclusion</ins>
+
+>Now we can run whole 4-bit calculator with all operations we set up for calculator. It have some main parts which are FSM(Finite State Machine) which has MOP(Micro-operations). Datapath that includes calculator's brain which is ALU(Arithmetic Logic Unit), multiplexers and hexadecimal decoder. This project was very important for me because after all logic design related knowledge I learned, now I can see bigger picture after I combine everything I learned. Now I can see that theory turns into practice with my 4-bit FPGA calculator.
 
 
